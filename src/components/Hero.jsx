@@ -56,6 +56,13 @@ export default function Hero() {
           <a className="btn btn--ghost" href={`mailto:${profile.email}`}>
             Get In Touch
           </a>
+          <a
+            className="btn btn--ghost"
+            href={profile.resume}
+            download="Tornov-Dutta-Resume.pdf"
+          >
+            Download Resume
+          </a>
         </div>
         <div className="hero__socials">
           <a href={profile.socials.github} target="_blank" rel="noopener noreferrer">
