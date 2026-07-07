@@ -1,7 +1,7 @@
 export const profile = {
   name: "Tornov Dutta",
   email: "tornovdutta@gmail.com",
-  resume: "/TornovDutta-Resume.pdf",
+  resume: "/TornovDutta.pdf",
   phone: "+91 74396 76474",
   location: "Kolkata, West Bengal, India",
   socials: {

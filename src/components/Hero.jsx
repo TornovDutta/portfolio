@@ -59,7 +59,7 @@ export default function Hero() {
           <a
             className="btn btn--ghost"
             href={profile.resume}
-            download="Tornov-Dutta-Resume.pdf"
+            download="TornovDutta.pdf"
           >
             Download Resume
           </a>
