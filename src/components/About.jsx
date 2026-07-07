@@ -22,7 +22,8 @@ export default function About() {
           <ul className="about__facts">
             {facts.map((f) => (
               <li key={f.text}>
-                <span>{f.icon}</span> {f.text}
+                <svg stroke="var(--accent)" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                {f.text}
               </li>
             ))}
           </ul>

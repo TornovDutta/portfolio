@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section className="section section--contact" id="contact">
       <div className="contact reveal">
-        <span className="section__num">07</span>
+        <span className="section__num">08</span>
         <h2 className="contact__title">Let's build something together</h2>
         <p className="contact__text">
           I'm open to internships, freelance work, and collaboration. Have a project in mind

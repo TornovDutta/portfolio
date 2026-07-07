@@ -288,6 +288,42 @@ em { font-style: normal; color: var(--accent-2); font-weight: 500; }
 .edu__org { color: var(--muted); margin-bottom: 6px; }
 .edu__gpa { color: var(--faint); }
 .edu__gpa strong { color: var(--accent-2); }
+/* ===== Profiles ===== */
+.profiles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.profile-card {
+  display: flex; flex-direction: column; position: relative;
+  background: rgba(21, 22, 31, 0.4); backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px;
+  padding: 32px; transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; z-index: 1; text-decoration: none;
+}
+.profile-card::before {
+  content: ""; position: absolute; inset: 0; border-radius: 20px; padding: 1px;
+  background: var(--accent-grad);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity: 0; transition: opacity 0.3s ease; z-index: -1;
+}
+.profile-card:hover {
+  transform: translateY(-6px);
+  background: rgba(21, 22, 31, 0.7);
+  box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5), 0 0 20px rgba(25,211,197,0.1);
+}
+.profile-card:hover::before { opacity: 1; }
+.profile-card__icon {
+  font-size: 2.2rem; margin-bottom: 20px; color: var(--accent-2);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.profile-card:hover .profile-card__icon { transform: scale(1.1) rotate(5deg); color: var(--accent); }
+.profile-card__content h3 { font-size: 1.4rem; color: var(--text); margin-bottom: 8px; transition: color 0.3s ease; }
+.profile-card:hover .profile-card__content h3 { color: var(--accent-2); }
+.profile-card__content p { color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
+.profile-card__arrow {
+  position: absolute; top: 32px; right: 32px; font-size: 1.2rem; color: var(--faint);
+  transition: transform 0.3s ease, color 0.3s ease; opacity: 0; transform: translate(-10px, 10px);
+}
+.profile-card:hover .profile-card__arrow { opacity: 1; transform: translate(0, 0); color: var(--accent-2); }
+
 
 /* ===== Contact ===== */
 .section--contact { text-align: center; max-width: 720px; }

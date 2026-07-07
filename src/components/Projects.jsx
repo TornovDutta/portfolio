@@ -9,7 +9,9 @@ export default function Projects() {
         {projects.map((p) => (
           <article className="proj reveal" key={p.name}>
             <div className="proj__top">
-              <span className="proj__icon">{p.icon}</span>
+              <span className="proj__icon">
+                <svg stroke="var(--accent-2)" fill="none" strokeWidth="1.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+              </span>
               <div className="proj__links">
                 {p.links.code && (
                   <a href={p.links.code} target="_blank" rel="noopener noreferrer">
@@ -34,6 +36,11 @@ export default function Projects() {
             </div>
           </article>
         ))}
+      </div>
+      <div style={{ display: "flex", justifyContent: "center", marginTop: "50px" }} className="reveal">
+        <a href="https://github.com/TornovDutta" target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--lg">
+          Explore More Projects on GitHub
+        </a>
       </div>
     </section>
   );
