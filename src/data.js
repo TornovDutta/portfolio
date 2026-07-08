@@ -62,7 +62,7 @@ export const projects = [
     name: "AI-Powered Study Resource Generator",
     desc: "A scalable backend application using Spring Boot to generate AI-powered study notes, practice papers, and quizzes. Features secure authentication via Spring Security and OAuth2, optimized content retrieval using semantic search, and automated recurring tasks.",
     tags: ["Java 17", "Spring Boot", "Spring Security", "Spring AI", "PostgreSQL", "JPA/Hibernate", "OAuth2", "Docker"],
-    links: { code: "https://github.com/TornovDutta/AI-Powered-Study-Resource-Generator" },
+    links: { code: "https://github.com/TornovDutta/AI-Powered-Study-Resource-Generator", live: "http://ec2-16-192-78-60.eu-north-1.compute.amazonaws.com:8080/api/v1/swagger-ui/index.html" },
   },
   {
     name: "VibeWall Anonymous Confession Platform",
