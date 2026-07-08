@@ -68,7 +68,7 @@ export const projects = [
     name: "VibeWall Anonymous Confession Platform",
     desc: "A scalable anonymous discussion backend with secure REST API architecture. Features JWT authentication, NVIDIA NIM (Llama 3.1) AI moderation pipeline, AES-GCM 256-bit encryption, and BCrypt password hashing.",
     tags: ["Spring Boot", "Java 17", "MongoDB", "Redis", "JWT", "Docker", "NVIDIA NIM API"],
-    links: { code: "https://github.com/TornovDutta/VibeWall", live: "https://vibewall-ui.netlify.app" },
+    links: { code: "https://github.com/TornovDutta/VibeWall", live: "https://vibewall.me/" },
   }
 ];
 
