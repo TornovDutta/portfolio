@@ -74,6 +74,9 @@ export default function Hero() {
           <a href={profile.socials.leetcode} target="_blank" rel="noopener noreferrer">
             LeetCode
           </a>
+          <a href={profile.socials.hackerrank} target="_blank" rel="noopener noreferrer">
+            HackerRank
+          </a>
         </div>
       </div>
       <a href="#about" className="scroll-down" aria-label="Scroll down">

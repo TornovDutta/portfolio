@@ -9,6 +9,7 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/tornov-dutta/",
     leetcode: "https://leetcode.com/u/TornovDutta/",
     codeforces: "https://codeforces.com/profile/tornovdutta",
+    hackerrank: "https://www.hackerrank.com/profile/tornov_26mca1001",
   },
 };
 
