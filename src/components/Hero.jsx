@@ -68,6 +68,9 @@ export default function Hero() {
           <a href={profile.socials.github} target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
+          <a href={profile.socials.gitlab} target="_blank" rel="noopener noreferrer">
+            GitLab
+          </a>
           <a href={profile.socials.linkedin} target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>

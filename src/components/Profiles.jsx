@@ -42,6 +42,14 @@ export default function Profiles() {
         <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12 0L1.608 6v12L12 24l10.392-6V6L12 0zm-1.125 18.261H8.385V13.88H6.55v4.381H4.062V5.739h2.488V10.12h1.835V5.739h2.49v12.522zm9.063 0h-2.58l-1.921-3.666h-1.637v3.666h-2.489V5.739h5.111c1.942 0 3.255.945 3.255 3.018 0 1.579-.908 2.628-2.298 2.923l2.559 6.581zm-3.518-8.817c.594 0 .999-.333.999-.968 0-.616-.405-.96-.999-.96h-2.008v1.928h2.008z"></path></svg>
       ),
       desc: "Explore my algorithmic problem solving, contest participation, and certified skill proficiencies."
+    },
+    {
+      name: "GitLab",
+      url: profile.socials.gitlab,
+      icon: (
+        <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58.26l2.13 6.53h8.94l2.13-6.53a.43.43 0 0 1 .58-.26.42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"></path></svg>
+      ),
+      desc: "Explore my GitLab open-source projects, version-controlled codebases, and collaborative repositories."
     }
   ];
 
