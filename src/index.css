@@ -33,9 +33,32 @@ em { font-style: normal; color: var(--text); font-weight: 500; }
 @media (min-width: 640px) { .sm\:block { display: block !important; } }
 
 /* ===== Background ===== */
-.bg-gradient-mesh {
-  position: fixed; inset: 0; z-index: -2;
-  background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
+.bg-animation {
+  position: fixed; inset: 0; z-index: -2; overflow: hidden;
+  background: var(--bg);
+}
+.orb {
+  position: absolute; border-radius: 50%; filter: blur(80px);
+  opacity: 0.5; animation: float-orb 20s infinite ease-in-out alternate;
+}
+.orb-1 {
+  width: 45vw; height: 45vw; background: rgba(16, 185, 129, 0.12);
+  top: -10%; left: -10%; animation-delay: 0s;
+}
+.orb-2 {
+  width: 55vw; height: 55vw; background: rgba(6, 182, 212, 0.08);
+  bottom: -20%; right: -10%; animation-delay: -5s; animation-duration: 25s;
+}
+.orb-3 {
+  width: 40vw; height: 40vw; background: rgba(16, 185, 129, 0.08);
+  top: 40%; left: 50%; animation-delay: -10s; animation-duration: 30s;
+}
+
+@keyframes float-orb {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(3%, 4%) scale(1.05); }
+  66% { transform: translate(-3%, 8%) scale(0.95); }
+  100% { transform: translate(8%, -3%) scale(1.08); }
 }
 
 /* ===== Nav ===== */
