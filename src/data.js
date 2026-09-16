@@ -65,12 +65,35 @@ export const projects = [
     desc: "A scalable backend application using Spring Boot to generate AI-powered study notes, practice papers, and quizzes. Features secure authentication via Spring Security and OAuth2, optimized content retrieval using semantic search, and automated recurring tasks.",
     tags: ["Java 17", "Spring Boot", "Spring Security", "Spring AI", "PostgreSQL", "JPA/Hibernate", "OAuth2", "Docker"],
     links: { code: "https://github.com/TornovDutta/AI-Powered-Study-Resource-Generator", live: "http://ec2-16-192-78-60.eu-north-1.compute.amazonaws.com:8080/api/v1/swagger-ui/index.html" },
+    category: "Backend Project",
   },
   {
     name: "VibeWall Anonymous Confession Platform",
     desc: "A scalable anonymous discussion backend with secure REST API architecture. Features JWT authentication, NVIDIA NIM (Llama 3.1) AI moderation pipeline, AES-GCM 256-bit encryption, and BCrypt password hashing.",
     tags: ["Spring Boot", "Java 17", "MongoDB", "Redis", "JWT", "Docker", "NVIDIA NIM API"],
     links: { code: "https://github.com/TornovDutta/VibeWall", live: "https://vibewall.me/" },
+    category: "Backend Project",
+  },
+  {
+    name: "Awesome Kafka",
+    desc: "A curated list of awesome Apache Kafka resources, libraries, tools, and more.",
+    tags: ["Kafka", "Backend", "Open Source"],
+    links: { code: "https://github.com/TornovDutta/awesome-kafka" },
+    category: "Backend Project",
+  },
+  {
+    name: "Fintech",
+    desc: "A robust backend Fintech application demonstrating secure transaction processing and financial data management.",
+    tags: ["Backend", "Java", "Spring Boot"],
+    links: { code: "https://github.com/TornovDutta/Fintech" },
+    category: "Backend Project",
+  },
+  {
+    name: "FastBlogs",
+    desc: "A high-performance blog backend system tailored for fast content delivery and efficient management.",
+    tags: ["Backend", "FastAPI", "Python"],
+    links: { code: "https://github.com/TornovDutta/FastBlogs" },
+    category: "Backend Project",
   }
 ];
 
@@ -109,19 +132,11 @@ export const navLinks = [
           { name: "Hacktoberfest", href: "#" }
         ]
       },
-      {
-        name: "Backend Project",
-        dropdown: [
-          { name: "Awesome Kafka", href: "https://github.com/TornovDutta/awesome-kafka" },
-          { name: "AI Study Resource Generator", href: "https://github.com/TornovDutta/AI-Powered-Study-Resource-Generator" },
-          { name: "Fintech", href: "https://github.com/TornovDutta/Fintech" },
-          { name: "FastBlogs", href: "https://github.com/TornovDutta/FastBlogs" }
-        ]
-      },
-      { name: "Full Stack Project", href: "#" },
-      { name: "Frontend Project", href: "#" },
-      { name: "Python Project", href: "#" },
-      { name: "Java Project", href: "#" }
+      { name: "Backend Project", href: "#backend-projects" },
+      { name: "Full Stack Project", href: "#full-stack-projects" },
+      { name: "Frontend Project", href: "#frontend-projects" },
+      { name: "Python Project", href: "#python-projects" },
+      { name: "Java Project", href: "#java-projects" }
     ]
   },
   { name: "Profiles", href: "#profiles" },
