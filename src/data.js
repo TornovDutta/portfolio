@@ -94,4 +94,36 @@ export const education = [
   }
 ];
 
-export const navLinks = ["About", "Skills", "Experience", "Projects", "Profiles", "Contact"];
+export const navLinks = [
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Experience", href: "#experience" },
+  {
+    name: "Projects",
+    href: "#projects",
+    dropdown: [
+      {
+        name: "Open Source",
+        dropdown: [
+          { name: "GirlScript Summer of Code", href: "#" },
+          { name: "Hacktoberfest", href: "#" }
+        ]
+      },
+      {
+        name: "Backend Project",
+        dropdown: [
+          { name: "Awesome Kafka", href: "https://github.com/TornovDutta/awesome-kafka" },
+          { name: "AI Study Resource Generator", href: "https://github.com/TornovDutta/AI-Powered-Study-Resource-Generator" },
+          { name: "Fintech", href: "https://github.com/TornovDutta/Fintech" },
+          { name: "FastBlogs", href: "https://github.com/TornovDutta/FastBlogs" }
+        ]
+      },
+      { name: "Full Stack Project", href: "#" },
+      { name: "Frontend Project", href: "#" },
+      { name: "Python Project", href: "#" },
+      { name: "Java Project", href: "#" }
+    ]
+  },
+  { name: "Profiles", href: "#profiles" },
+  { name: "Contact", href: "#contact" }
+];

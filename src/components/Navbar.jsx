@@ -11,6 +11,33 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const renderLinks = (links, isMobile = false) => {
+    return links.map((link, idx) => {
+      if (link.dropdown) {
+        return (
+          <div key={idx} className={`nav-item has-dropdown ${isMobile ? "mobile-item" : ""}`}>
+            <a href={link.href} className={`nav-link ${isMobile ? "mobile-link" : ""}`}>
+              {link.name} ▾
+            </a>
+            <div className={`nav-dropdown ${isMobile ? "mobile-dropdown" : ""}`}>
+              {renderLinks(link.dropdown, isMobile)}
+            </div>
+          </div>
+        );
+      }
+      return (
+        <a 
+          key={idx} 
+          href={link.href} 
+          className={`nav-link ${isMobile ? "mobile-link" : ""}`} 
+          onClick={() => isMobile && setOpen(false)}
+        >
+          {link.name}
+        </a>
+      );
+    });
+  };
+
   return (
     <>
       <header className={`nav-wrapper ${scrolled ? "scrolled" : ""}`}>
@@ -20,11 +47,7 @@ export default function Navbar() {
             <span className="nav__logo-text hidden sm:block">Tornov Dutta</span>
           </a>
           <nav className="nav__links">
-            {navLinks.map((l) => (
-              <a key={l} href={`#${l.toLowerCase()}`}>
-                {l}
-              </a>
-            ))}
+            {renderLinks(navLinks)}
           </nav>
           <div className="nav__actions">
             <a href={`mailto:${profile.email}`} className="btn-hire">Hire Me</a>
@@ -41,11 +64,7 @@ export default function Navbar() {
 
       <div className={`nav__mobile ${open ? "open" : ""}`}>
         <div className="nav__mobile-inner">
-          {navLinks.map((l) => (
-            <a key={l} href={`#${l.toLowerCase()}`} onClick={() => setOpen(false)}>
-              {l}
-            </a>
-          ))}
+          {renderLinks(navLinks, true)}
         </div>
       </div>
     </>

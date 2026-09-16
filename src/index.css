@@ -321,3 +321,50 @@ em { font-style: normal; color: var(--text); font-weight: 500; }
   .reveal { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
 }
+
+/* ===== Dropdowns ===== */
+.nav-item { position: relative; }
+.nav-link {
+  font-size: 0.9rem; color: var(--muted); font-weight: 500;
+  position: relative; transition: color 0.2s; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 4px;
+}
+.nav-link:hover { color: var(--text); }
+.nav-dropdown {
+  position: absolute; top: 100%; left: 0;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 8px 0; min-width: 220px;
+  display: flex; flex-direction: column;
+  opacity: 0; visibility: hidden; transform: translateY(10px);
+  transition: all 0.3s ease; box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+}
+.has-dropdown:hover > .nav-dropdown {
+  opacity: 1; visibility: visible; transform: translateY(16px);
+}
+.nav-dropdown .nav-item { position: relative; }
+.nav-dropdown .nav-link {
+  padding: 8px 20px; display: block; width: 100%;
+}
+.nav-dropdown .nav-link:hover { background: rgba(255,255,255,0.05); }
+
+/* Nested Dropdown */
+.nav-dropdown .nav-dropdown {
+  top: 0; left: 100%; transform: translateX(10px); margin-left: 4px;
+}
+.nav-dropdown .has-dropdown:hover > .nav-dropdown {
+  transform: translateX(0);
+}
+
+/* Mobile Nav Dropdown */
+.mobile-item { display: flex; flex-direction: column; align-items: center; width: 100%; }
+.mobile-link { font-size: 1.5rem !important; font-weight: 600 !important; color: var(--muted) !important; padding: 8px 0; text-align: center; justify-content: center; }
+.mobile-link:hover { color: var(--text) !important; }
+.mobile-dropdown {
+  position: static; opacity: 1; visibility: visible; transform: none;
+  background: transparent; border: none; box-shadow: none; min-width: auto;
+  display: none; padding: 12px 0 16px 0; gap: 12px;
+}
+.has-dropdown:hover > .mobile-dropdown { display: flex; }
+.mobile-dropdown .mobile-link { font-size: 1.2rem !important; }
+.mobile-dropdown .mobile-dropdown .mobile-link { font-size: 1rem !important; color: var(--faint) !important; }
+
